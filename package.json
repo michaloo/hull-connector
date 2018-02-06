@@ -7,7 +7,7 @@
   "homepage": "https://hull.io/docs",
   "keywords": [
     "hull",
-    "ship",
+    "builder",
     "hull-ship"
   ],
   "author": {
@@ -16,8 +16,9 @@
     "url": "https://github.com/hull"
   },
   "engines": {
-    "node": "8.x",
-    "npm": "3.x"
+    "node": "8.9.x",
+    "npm": "5.5.x",
+    "yarn": "1.3.x"
   },
   "lint-staged": {
     "*.{js,jsx,css,scss,json}": [
@@ -26,7 +27,7 @@
     ]
   },
   "scripts": {
-    "gen-dev": "./node_modules/.bin/builder-support gen-dev",
+    "gen-dev": "builder-support gen-dev",
     "publish:both": "npm run gen-dev ; npm run prepare ; npm publish ; npm publish dev",
     "lint": "eslint --color -c config/eslint/.eslintrc src server",
     "clean": "rimraf dist; rimraf lib",
@@ -89,9 +90,20 @@
   },
   "devDependencies": {
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.8.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-flowtype-errors": "^3.3.6",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "flow-bin": "^0.59.0",
+    "flow-typed": "^2.2.3",
     "hull-repl": "^0.1.1",
     "mocha": "^4.0.1",
     "npm-check": "^5.5.1",
+    "prettier": "^1.8.2",
     "rimraf": "^2.6.2"
   }
 }

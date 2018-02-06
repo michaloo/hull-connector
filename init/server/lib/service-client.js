@@ -6,7 +6,12 @@
  * which are named around the 3rd party API naming convention
  */
 class ServiceClient {
-
 }
 
 module.exports = ServiceClient;
+
+a = "1";
+if (a = 1) {
+
+}
+

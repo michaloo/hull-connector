@@ -23,6 +23,7 @@ let plugins = [
             "flow"
           ],
           plugins: [
+            "transform-flow-strip-types",
             require.resolve('react-hot-loader/babel'),
             [
               'replace-require',
